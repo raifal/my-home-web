@@ -4,7 +4,7 @@ foreach ($line in $lines) {
     Set-Variable $a $b
 }
 
-Remove-Item -Recurse -Force .\dist
+Remove-Item -Recurse -Force .\dist -ErrorAction Ignore
 ng build --prod
 
 plink -l ${ipinterative_user} -pw ${ipinteractive_ssh_passphrase} -i ..\secrets\ipinteractive.ppk ${ipinterative_ip} rm -rf ~${ipinterative_user}/build_temp_my_home_web

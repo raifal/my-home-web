@@ -1,0 +1,12 @@
+
+
+<ul class="lights">
+  <li *ngFor="let light of lights">
+    <a routerLink="/lightdetail/{{light.id}}">
+      <span class="badge">{{light.id}}</span> {{light.name}}
+    </a>
+  </li>
+</ul>
+
+
+
